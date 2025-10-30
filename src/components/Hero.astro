@@ -1,0 +1,44 @@
+---
+import SocialPill from "./SocialPill.astro";
+import GithubIcon from "../icons/Github.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import MailIcon from "../icons/Mail.astro";
+import CVIcon from "../icons/CV.astro";
+---
+<h1
+    class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 items-center"
+>
+    <img class="rounded-full size-18 mr-4" src="Me.webp" alt="Eric Photo" />Hey,
+    soy Eric
+</h1>
+<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[600px]">
+    Desarrollador Web y estudiante de Videojuegos.
+</h2>
+<ul class="flex gap-4 mt-8 flex-wrap">
+    <li>
+        <SocialPill href="https://github.com/EricRubioSanchez">
+            <GithubIcon class="size-4 lg:size-6" />
+            <span>GitHub</span>
+        </SocialPill>
+    </li>
+    <li>
+        <SocialPill
+            href="https://www.linkedin.com/in/eric-rubio-sanchez-a8a80920a/"
+        >
+            <LinkedInIcon class="lg:size-6" />
+            <span>LinkedIn</span>
+        </SocialPill>
+    </li>
+    <li>
+        <SocialPill href="mailto:ericrubiosanchez@gmail.com">
+            <MailIcon class="lg:size-6" />
+            <span>Email</span>
+        </SocialPill>
+    </li>
+    <li>
+        <SocialPill href="/CV-EricRubio.pdf">
+            <CVIcon class="lg:size-6" />
+            <span>Curriculum Vitae</span>
+        </SocialPill >
+    </li>
+</ul>

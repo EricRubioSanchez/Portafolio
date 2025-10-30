@@ -1,0 +1,20 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Julio 2025 - Presente",
+    title: "Desarrollador Frontend en Scalely",
+    description:
+      "Desarrollo y mantenimiento de interfaces de usuario utilizando tecnologías modernas como React y Tailwind CSS. Colaboración con equipos de diseño y backend para crear experiencias web optimizadas y accesibles.",
+  }
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">
+    {EXPERIENCE.map((exp) => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...exp} />
+        </li>
+    ))}
+</ol>
+

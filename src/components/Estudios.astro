@@ -1,0 +1,32 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const ESTUDIOS = [
+  {
+    date: "Septiembre 2024 - Presente",
+    title: "Grado en Diseño y Desarrollo de Videojuegos en la Universitat de Girona",
+    description:
+      "Estudio de los fundamentos del diseño y desarrollo de videojuegos, incluyendo programación, diseño gráfico, narrativa interactiva y experiencia de usuario. Participación en proyectos prácticos para aplicar los conocimientos adquiridos.",
+  },
+  {
+    date: "Septiembre 2022 - Junio 2024",
+    title: "Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web en el Institut Sa Palomera",
+    description:
+      "Formación especializada en el desarrollo de aplicaciones web, abarcando tecnologías como HTML, CSS, JavaScript, y frameworks modernos. Desarrollo de proyectos web completos, desde la planificación hasta la implementación y despliegue.",
+  },
+  {
+    date: "Septiembre 2019 - Junio 2021",
+    title: "Bachillerato en Ciencias y Tecnología en el Institut S'Agulla",
+    description:
+      "Estudios centrados en las ciencias y la tecnología, proporcionando una base sólida en matemáticas, física, química. Preparación para estudios superiores en campos relacionados con la tecnología y la ingeniería.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">
+    {ESTUDIOS.map((exp) => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...exp} />
+        </li>
+    ))}
+</ol>
+

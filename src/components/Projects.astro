@@ -1,0 +1,120 @@
+---
+import TypescriptIcon from "../icons/Typescript.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import ReactIcon from "../icons/React.astro";
+import BootstrapIcon from "../icons/Bootstrap.astro";
+import SupabaseIcon from "../icons/Supabase.astro";
+import JavascriptIcon from "../icons/Javascript.astro";
+import PhpIcon from "../icons/Php.astro";
+import MysqlIcon from "../icons/Mysql.astro";
+import GithubIcon from "../icons/Github.astro";
+import WorldIcon from "../icons/World.astro";
+const TAGS={
+  TYPESCRIPT: {
+    name : "TypeScript",
+    class: "bg-[#235589] text-white",
+    icon: TypescriptIcon
+  },
+  ASTRO: {
+    name : "Astro",
+    class: "bg-[#af2c5a] text-white",
+    icon: AstroIcon
+  },
+  REACT: {
+    name : "React",
+    class: "bg-[#08799b] text-white",
+    icon: ReactIcon
+  },
+  BOOTSTRAP: {
+    name : "Bootstrap",
+    class: "bg-[#5614b3] text-white",
+    icon: BootstrapIcon
+  },
+  SUPABASE: {
+    name : "Supabase",
+    class: "bg-[#267753] text-white",
+    icon: SupabaseIcon
+  },
+  JAVASCRIPT: {
+    name : "JavaScript",
+    class: "bg-[#7f7316] text-white",
+    icon: JavascriptIcon
+  },
+  PHP: {
+    name : "PHP",
+    class: "bg-[#5a5d81] text-white",
+    icon: PhpIcon
+  },
+  MYSQL: {
+    name : "MySQL",
+    class: "bg-[#ab6414] text-white",
+    icon: MysqlIcon
+  },
+}
+const PROJECTS = [
+  {
+    title: "Scalely",
+    description:
+      "Scalely es una plataforma web que ofrece servicios de automatización de cold emails para ayudar a startups a aumentar su alcance y conseguir nuevos clientes. Cuenta con una página de marketing desplegada y una web app en desarrollo para gestión de campañas y métricas.",
+    link: "https://www.scalely.eu/",
+    image: "/projects/Scalely.webp",
+    tags: [TAGS.BOOTSTRAP,TAGS.JAVASCRIPT, TAGS.TYPESCRIPT, TAGS.ASTRO, TAGS.REACT, TAGS.SUPABASE],
+  },
+  {
+    title: "Proyecto Final De Grado",
+    description: "Fantasy es una web tipo fantasy game de baloncesto que permite crear ligas personalizadas entre amigos. Cada usuario puede diseñar sus propios jugadores, gestionar su equipo y competir con otros para demostrar quién forma la mejor plantilla.",
+    image: "/projects/ProyectoFinal.webp",
+    tags: [TAGS.BOOTSTRAP, TAGS.JAVASCRIPT,  TAGS.PHP, TAGS.MYSQL],
+    github: "https://github.com/EricRubioSanchez/Proyecto-Final-Fantasy",
+  },
+];
+---
+<div class="flex flex-col md:flex-row gap-y-10 gap-4 justify-around px-4">
+{
+  PROJECTS.map((project) => (
+    <article class="max-w-md bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-900 dark:border-gray-800 flex flex-col ">
+      <img
+        class="rounded-t-lg shadow-2xl shadow-orange-700/20 w-full h-48 object-cover"
+        src={project.image}
+        alt={`Captura de pantalla del proyecto ${project.title}`}
+      />
+      <div class="p-5 flex flex-col flex-1">
+      <h3 class="text-2xl font-semibold text-orange-400 mb-2">{project.title}</h3>
+      <ul class="flex flex-row flex-wrap gap-x-4 gap-y-2 mb-4">
+        {project.tags.map((tag) => (
+          <li><span class={`flex gap-x-2 rounded-full items-center text-sm ${tag.class} px-2 py-1`}> 
+          <tag.icon class ="size-4"/>
+          {tag.name}
+          </span>
+          
+          </li>
+        ))}
+      </ul>
+      <p class="text-lg mt-auto mb-2 text-pretty">{project.description}</p>
+      <div class="flex pt-2 gap-x-4 ">
+        {project.link && (
+          <a
+    href={project.link}
+    target="_blank"
+    rel="noopener"
+    class="rounded-lg border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2 lg:py-2 lg:px-4 bg-white/5 hover:scale-110 hover:bg-white/10 transition"
+>
+   <WorldIcon class="size-5 mr-2" /> Ver Proyecto
+</a>
+        )}
+        {project.github && (
+          <a
+    href={project.github}
+    target="_blank"
+    rel="noopener"
+    class="rounded-lg border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2 lg:py-2 lg:px-4 bg-white/5 hover:scale-110 hover:bg-white/10 transition"
+>
+    <GithubIcon class="size-5 mr-2" /> Ver Código
+</a>
+        )}
+      </div>
+      </div>
+    </article>
+  ))
+}
+</div>
