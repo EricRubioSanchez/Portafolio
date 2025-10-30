@@ -1,5 +1,5 @@
 # Portfolio — README
-
+If you want to run the static content on this page, you can do so from the /dist folder. Alternatively, you can install astro and run the pnpm run command, which will run from src/pages/index.astro.
 ## Project analysis
 
 This repository contains the source code for a personal portfolio website built with Astro and Tailwind CSS. Its primary purpose is to showcase selected projects, provide an easy way to download the CV, and offer straightforward contact options for potential employers or collaborators. The project prioritizes performance, accessibility, and a consistent experience across mobile and desktop devices. The codebase is organized into reusable components (Header, Hero, Projects, Footer, etc.) and centralized global styles to make maintenance and future updates straightforward.
