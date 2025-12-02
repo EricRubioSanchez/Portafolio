@@ -1,5 +1,35 @@
 # Portfolio — README
-If you want to run the static content on this page, you can do so from the /dist folder. Alternatively, you can install astro and run the pnpm run command, which will run from src/pages/index.astro.
+
+## Why Astro
+
+This project was built with Astro. It was my first time using Astro and I wanted to try it after hearing it is a very good framework for building fast, component-based static sites. Astro made it easy to combine lightweight components, optimize the output for performance, and keep the development experience simple while producing a small, static dist folder.
+
+## Running the project
+
+### Install dependencies
+```bash
+# npm or
+npm install
+
+```
+
+### Run in development
+Starts Astro's dev server with live reload:
+```bash
+# npm
+npm run dev
+
+```
+Open http://localhost:4321 (or the port shown in the console).
+
+## Run from the static dist folder
+```bash
+# npm
+npm run preview
+
+```
+
+
 ## Project analysis
 
 This repository contains the source code for a personal portfolio website built with Astro and Tailwind CSS. Its primary purpose is to showcase selected projects, provide an easy way to download the CV, and offer straightforward contact options for potential employers or collaborators. The project prioritizes performance, accessibility, and a consistent experience across mobile and desktop devices. The codebase is organized into reusable components (Header, Hero, Projects, Footer, etc.) and centralized global styles to make maintenance and future updates straightforward.
