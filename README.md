@@ -34,6 +34,23 @@ npm run preview
 
 This repository contains the source code for a personal portfolio website built with Astro and Tailwind CSS. Its primary purpose is to showcase selected projects, provide an easy way to download the CV, and offer straightforward contact options for potential employers or collaborators. The project prioritizes performance, accessibility, and a consistent experience across mobile and desktop devices. The codebase is organized into reusable components (Header, Hero, Projects, Footer, etc.) and centralized global styles to make maintenance and future updates straightforward.
 
+## Project structure
+
+Project layout and key folders/files:
+
+- public/                — static assets served as-is (images, CV PDF, favicon)
+- src/
+  - components/          — reusable UI components (Header, Hero, Projects, etc.)
+  - layouts/             — page layouts (Layout.astro)
+  - pages/               — route pages (index.astro)
+  - styles/              — global and Tailwind entry CSS (global.css, tailwind.css)
+  - icons/               — SVG/astro icon components
+- dist/                  — production build output (generated after build)
+- package.json           — scripts and dependencies
+- tailwind.config.{js,cjs} — Tailwind configuration (content paths, theme)
+- README.md              — this file
+
+
 ## User profile (User Persona)
 
 - Name: Laura Martínez  
